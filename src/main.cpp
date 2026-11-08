@@ -1,18 +1,33 @@
 #include <iostream>
-#include <string>
+#include "Image.h"
 
 int main() {
 
-    std::string projectName = "RespiraVision";
+    // Create a 4 x 3 grayscale image
+    Image image(4, 3);
 
-    std::cout << "================================\n";
-    std::cout << "       " << projectName << "\n";
-    std::cout << "================================\n";
+    // Display image information
+    image.displayInfo();
 
-    std::cout << "Respiratory Image Analysis Prototype\n";
-    std::cout << "C++ Core Processing Module\n";
+    // Set some pixel values
+    image.setPixel(0, 0, 100);
+    image.setPixel(1, 0, 150);
+    image.setPixel(2, 1, 200);
 
-    std::cout << "Project initialisation successful!\n";
+    // Retrieve pixel values
+    std::cout << "\nPixel values:" << std::endl;
+
+    std::cout << "Pixel (0, 0): "
+              << static_cast<int>(image.getPixel(0, 0))
+              << std::endl;
+
+    std::cout << "Pixel (1, 0): "
+              << static_cast<int>(image.getPixel(1, 0))
+              << std::endl;
+
+    std::cout << "Pixel (2, 1): "
+              << static_cast<int>(image.getPixel(2, 1))
+              << std::endl;
 
     return 0;
 }

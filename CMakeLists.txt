@@ -10,6 +10,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Create executable
 add_executable(respiravision
     src/main.cpp
+    src/Image.cpp
 )
 
 # Include header directory
